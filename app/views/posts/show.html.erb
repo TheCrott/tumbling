@@ -12,4 +12,10 @@
   <p class="body">
     <%= simple_format(@post.body) %>
   </p>
+
+  <div id="comments">
+    <h2><%= @post.comments.count %> Comment(s)</h2>
+    <%= render @post.comments %><br>
+    <%= render 'comments/form' %>
+  </div>
 </div>
