@@ -4,11 +4,31 @@
   <title>Tumbling</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <div id="sidebar">
+    <ul>
+      <li class="category"><%= link_to 'Tumbling', root_path %></li>
+      <li><%= link_to 'Posts', root_path %></li>
+      <li><%= link_to 'About', root_path %></li>
+    </ul>
 
-<%= yield %>
+    <p class="sign_in">Login</p>
+  </div>
+
+  <div id="main_content">
+    <div id="header">
+      </p>Posts</p>
+      <div class="buttons">
+        <button class="button"><%= link_to 'New Post', new_post_path %></button>
+        <button class="button"><%= link_to 'Logout', new_post_path %></button>
+      </div>
+    </div>
+    
+    <%= yield %>
+  </div>
 
 </body>
 </html>
